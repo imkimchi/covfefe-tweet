@@ -8,7 +8,7 @@
     "prepublish": "babel index.js -d src"
   },
   "bin": {
-    "covfefe": "./index.js"
+    "covfefe": "src/index.js"
   },
   "author": "Philip Yoonshin",
   "license": "ISC",
