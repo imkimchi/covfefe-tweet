@@ -12,6 +12,7 @@
   },
   "author": "Philip Yoonshin",
   "license": "ISC",
+  "preferGlobal": true,
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
