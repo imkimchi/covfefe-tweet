@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import covfefe from 'covfefe'
 import figlet from 'figlet'
 import chalk from 'chalk'
