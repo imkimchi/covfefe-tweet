@@ -4,4 +4,3 @@ node_js:
   - "7.9"
 install:
   - npm build
-  - npm install -g
