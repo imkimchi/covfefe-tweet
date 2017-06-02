@@ -5,17 +5,20 @@
   "main": "index.js",
   "scripts": {
     "start": "babel-node .",
-    "prepublish": "babel index.js -d src"
+    "build": "babel index.js -d src && babel lib -d src/lib && babel config.js -d src",
+    "prepublish": "npm build"
   },
   "bin": {
     "covfefe": "src/index.js"
   },
-  "author": "Philip Yoonshin",
+  "author": "Philip",
   "license": "ISC",
   "preferGlobal": true,
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
+    "babel-plugin-transform-regenerator": "^6.24.1",
+    "babel-polyfill": "^6.23.0",
     "babel-preset-env": "^1.5.1",
     "babel-preset-stage-3": "^6.24.1"
   },
@@ -25,8 +28,11 @@
     "figlet": "^1.2.0",
     "fs-extra": "^3.0.1",
     "inquirer": "^3.0.6",
+    "node-gyp": "^3.6.2",
     "oauth-libre": "^0.9.15",
+    "opn": "^5.0.0",
     "ora": "^1.2.0",
+    "speaker": "^0.3.0",
     "twit": "^2.2.5"
   }
 }

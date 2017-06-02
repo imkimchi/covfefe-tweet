@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 import covfefe from 'covfefe'
 import figlet from 'figlet'
 import chalk from 'chalk'
@@ -12,7 +11,7 @@ import generateTwit from './lib/twit'
 const log = console.log;
 const isNewLogin = () => fs.pathExists('./data.json')
 
-async function donaldTrump () {
+const donaldTrump = async () => {
     log(chalk.cyan(figlet.textSync('covfefe', {horizontalLayout: 'full'})))
     let answer = await isNewLogin() ? await tokenExists() : await makeNewToken()
     let access_token = await fs.readJson('./data.json')
