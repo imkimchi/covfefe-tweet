@@ -3,5 +3,5 @@ node_js:
   - "8.0"
   - "7.9"
 install:
-  - npm install -g covfefe-tweet
-  - npm install
+  - npm build
+  - npm install -g
