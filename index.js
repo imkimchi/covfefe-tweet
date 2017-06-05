@@ -13,7 +13,6 @@ const isNewLogin = () => fs.pathExists('./data.json')
 
 const donaldTrump = async () => {
     log(chalk.cyan(figlet.textSync('covfefe', {horizontalLayout: 'full'})))
-    console.log(await isNewLogin())
     let answer = await isNewLogin() ? await tokenExists() : await makeNewToken()
 
     let access_token = await fs.readJson('./data.json', { throws: false })
@@ -25,10 +24,11 @@ const donaldTrump = async () => {
         let userInfo = result.data.user
         
         log(chalk.bold("\nJust sent the tweet!  ") + chalk.cyan(`${userInfo.name}: "${result.data.text}"`))
-        log(chalk.gray(`https://twitter.com/${userInfo.screen_name}/status/${result.data.id_str}`))
+        log(chalk.bgBlack(`https://twitter.com/${userInfo.screen_name}/status/${result.data.id_str}`))
         process.exit(0)
     } catch (e) {
         console.error("Failed to update your status: ", e)
+        console.log(result.data)
         process.exit(0)
     }
 }
