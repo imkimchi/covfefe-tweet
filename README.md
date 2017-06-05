@@ -20,6 +20,7 @@ npm install -g covfefe-tweet
 ```
 covfefe
 ```
+and just tweet. It's Easy as Donald Trump
 
 ## Build
 ```
