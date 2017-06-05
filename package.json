@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "babel-node .",
-    "build": "babel index.js -d src && babel lib -d src/lib && babel config.js -d src",
+    "build": "babel index.js -d src && babel lib -d src/lib",
     "prepublish": "npm build"
   },
   "bin": {
@@ -17,6 +17,7 @@
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
+    "babel-plugin-transform-function-bind": "^6.22.0",
     "babel-plugin-transform-regenerator": "^6.24.1",
     "babel-polyfill": "^6.23.0",
     "babel-preset-env": "^1.5.1",
@@ -32,6 +33,7 @@
     "oauth-libre": "^0.9.15",
     "opn": "^5.0.0",
     "ora": "^1.2.0",
+    "path": "^0.12.7",
     "speaker": "^0.3.0",
     "twit": "^2.2.5"
   }

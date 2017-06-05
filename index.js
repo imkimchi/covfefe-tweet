@@ -13,8 +13,10 @@ const isNewLogin = () => fs.pathExists('./data.json')
 
 const donaldTrump = async () => {
     log(chalk.cyan(figlet.textSync('covfefe', {horizontalLayout: 'full'})))
+    console.log(await isNewLogin())
     let answer = await isNewLogin() ? await tokenExists() : await makeNewToken()
-    let access_token = await fs.readJson('./data.json')
+
+    let access_token = await fs.readJson('./data.json', { throws: false })
 
     try {
         let T = await generateTwit(access_token)
