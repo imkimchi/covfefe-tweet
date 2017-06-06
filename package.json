@@ -9,7 +9,7 @@
     "prepublish": "npm run build"
   },
   "bin": {
-    "covfefe": "src/index.js"
+    "covfefe-t": "src/index.js"
   },
   "author": "Philip",
   "license": "ISC",
