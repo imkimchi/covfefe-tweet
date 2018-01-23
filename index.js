@@ -14,7 +14,6 @@ const isNewLogin = () => fs.pathExists('./data.json')
 const donaldTrump = async () => {
     log(chalk.cyan(figlet.textSync('covfefe', {horizontalLayout: 'full'})))
     let answer = await isNewLogin() ? await tokenExists() : await makeNewToken()
-
     let access_token = await fs.readJson('./data.json', { throws: false })
 
     try {
