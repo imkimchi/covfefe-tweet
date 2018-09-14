@@ -15,11 +15,6 @@
 ```
 npm install -g covfefe-tweet
 ```
-if you have any permission issues, run below instead.
-```
-npm install -g covfefe-tweet --unsafe-perm=true --allow-root
-```
-
 
 ## Usage
 ```
